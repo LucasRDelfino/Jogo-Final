@@ -26,10 +26,9 @@ public void Componentes() {
 	add(lb3);
 	
 	
-	ribamar = new ImageIcon ("ribamar.png");
-	lb2 = new JLabel (ribamar);
-	lb2.setBounds(-150,-100,1000,879);
-	add(lb2);
+
+
+	
 	
 	
 	fundo = new ImageIcon ("fundo.jpg");
