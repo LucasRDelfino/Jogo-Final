@@ -5,12 +5,12 @@ import java.net.URL;
 import javax.sound.sampled.*;
 import java.io.*;
 
-public class TelaInicial extends JFrame{
+public class escalacao extends JFrame{
 	JLabel lb1,lb2,lb3,lb4;
-	ImageIcon fundo,ribamar,logo;
+	ImageIcon escalacao;
 	Clip clip;
 
-public TelaInicial() {
+public escalacao() {
 	Componentes();
 	Eventos();
 }
@@ -20,23 +20,13 @@ public void Componentes() {
 	setLayout(null);
 	setBackground(Color.WHITE);
 	
-	logo = new ImageIcon ("logo.png");
-	lb3 = new JLabel (logo);
-	lb3.setBounds(800,200,300,300);
-	add(lb3);
-	
-	
-	ribamar = new ImageIcon ("ribamar.png");
-	lb2 = new JLabel (ribamar);
-	lb2.setBounds(100,100,500,500);
-	add(lb2);
 
 	
 	
 	
-	fundo = new ImageIcon ("fundo.jpg");
-	lb1 = new JLabel (fundo);
-	lb1.setBounds(0,0,1400,1050);
+	escalacao = new ImageIcon ("escalação.jpg");
+	lb1 = new JLabel (escalacao);
+	lb1.setBounds(0,0,1000,1033);
 	add(lb1);
 	
 	
@@ -80,9 +70,9 @@ public void Eventos() {
 
 public static void main(String args[]) {
 	
-	 TelaInicial frame = new TelaInicial();
+	 escalacao frame = new escalacao();
 	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	 frame.setBounds(0,0,1400,1050);
+	 frame.setBounds(0,0,1000,1033);
 	 frame.setVisible(true);
 	
 }
