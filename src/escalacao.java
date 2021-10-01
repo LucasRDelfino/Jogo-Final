@@ -20,10 +20,10 @@ public escalacao() {
 public void Componentes() {
 	setLayout(null);
 	setBackground(Color.WHITE);
-	setBounds(0,0,1000,1033);
+	setBounds(0,0,852,80);
 	
 	jogar = new JButton (">>>");
-	jogar.setBounds(450,785,110,30);
+	jogar.setBounds(400,785,110,30);
 	jogar.setFont(new Font("Ravie", 1, 18));
     jogar.setBackground(Color.RED);
     jogar.setFocusable(false);
@@ -31,9 +31,9 @@ public void Componentes() {
 	
 	
 	
-	escalacao = new ImageIcon ("escalação.jpg");
+	escalacao = new ImageIcon ("escalacao.jpg");
 	lb1 = new JLabel (escalacao);
-	lb1.setBounds(0,0,1000,1033);
+	lb1.setBounds(0,0,852,880);
 	add(lb1);
 	
 	
