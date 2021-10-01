@@ -9,6 +9,7 @@ public class escalacao extends JFrame{
 	JLabel lb1,lb2,lb3,lb4;
 	ImageIcon escalacao;
 	Clip clip;
+	JButton jogar;
 
 public escalacao() {
 	Componentes();
@@ -19,8 +20,14 @@ public escalacao() {
 public void Componentes() {
 	setLayout(null);
 	setBackground(Color.WHITE);
+	setBounds(0,0,1000,1033);
 	
-
+	jogar = new JButton (">>>");
+	jogar.setBounds(450,785,110,30);
+	jogar.setFont(new Font("Ravie", 1, 18));
+    jogar.setBackground(Color.RED);
+    jogar.setFocusable(false);
+	add(jogar);
 	
 	
 	
@@ -30,24 +37,33 @@ public void Componentes() {
 	add(lb1);
 	
 	
-//    try {
-//  	  File soundFile = new File("ribamar.wav");
-//         AudioInputStream sound = AudioSystem.getAudioInputStream(soundFile);
-//         DataLine.Info info = new DataLine.Info(Clip.class, sound.getFormat());
-//         clip = (Clip) AudioSystem.getLine(info);
-//         clip.open(sound);
-//         clip.start();
-//         
-//      } catch (Exception e) {
-//          JOptionPane.showMessageDialog(this, e);
-//      }
+    try {
+ 	  File soundFile = new File("vi.wav");
+         AudioInputStream sound = AudioSystem.getAudioInputStream(soundFile);
+         DataLine.Info info = new DataLine.Info(Clip.class, sound.getFormat());
+         clip = (Clip) AudioSystem.getLine(info);
+        clip.open(sound);
+        clip.start();
+        
+      } catch (Exception e) {
+          JOptionPane.showMessageDialog(this, e);
+      }
 
 			
 	
 }
 
 public void Eventos() {
-	setLayout(null);
+	jogar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			 //Muda de Tela
+			  new Dificuldade().setVisible(true);				
+			  setVisible(false);
+			  clip.stop();
+		
+			
+		}
+	});
 	
 
 }
@@ -72,7 +88,6 @@ public static void main(String args[]) {
 	
 	 escalacao frame = new escalacao();
 	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	 frame.setBounds(0,0,1000,1033);
 	 frame.setVisible(true);
 	
 }
